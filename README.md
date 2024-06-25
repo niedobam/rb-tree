@@ -17,13 +17,7 @@ An implementation of a [Red-black tree](https://en.wikipedia.org/wiki/Red%E2%80%
     cd rb-tree
     ```
 
-2. Initialize the Go module:
-
-    ```sh
-    go mod init rb-tree
-    ```
-
-3. Build the project:
+2. Build the project:
 
     ```sh
     go build -o rb-tree ./cmd
