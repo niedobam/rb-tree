@@ -13,7 +13,7 @@ An implementation of a [Red-black tree](https://en.wikipedia.org/wiki/Red%E2%80%
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/rb-tree.git
+    git clone https://github.com/niedobam/rb-tree.git
     cd rb-tree
     ```
 
