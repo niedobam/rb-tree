@@ -192,6 +192,25 @@ func ExecuteCommand(myTree *rbtree.Tree, command string, values []int) {
         fmt.Printf("\n")
         myTree.PrintTree()
         fmt.Printf("\n============================================\n")
+    case "delete-root", "remove-root":
+        if myTree.GetTreeSize() == 0 {
+            fmt.Printf("\nTree is empty --> enter some values before running get-min command\n")
+            fmt.Printf("\n============================================\n")
+            return
+        }
+        if myTree.GetRoot().GetValue() == 0 || myTree.GetRoot() == nil {
+            fmt.Printf("\nTree is empty --> root is nil\n\n")
+            fmt.Printf("Insert some values before deleting root\n")
+            fmt.Printf("\n============================================\n")
+            return
+        }
+        var oldRootValue int = myTree.GetRoot().GetValue()
+        fmt.Printf("\nTree before deleting root -->%d<--\n\n", oldRootValue)
+        myTree.PrintTree()
+        myTree.DeleteNode(myTree.GetRoot().GetValue())
+        fmt.Printf("\n\nTree after deleting root -->%d<--\n\n", oldRootValue)
+        myTree.PrintTree()
+        fmt.Printf("\n============================================\n")
     case "clear", "clc":
         common.CallClear()
     case "help":
